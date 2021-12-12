@@ -1,4 +1,9 @@
 # automated-carrier-vehicle
+
+# Latar Belakang #
+Tuntutan pekerjaan modern yang semakin kompleks mengharuskan orang-orang untuk lebih bijak menggunakan waktu dan energi untuk mengerjakan hal-hal yang memaksimalkan kecerdasan otak manusia. Pekerjaan yang bersifat repetitif, monoton, dan tidak membutuhkan bantuan manusia dapat digantikan dengan sebuah robot.
+
+
 aaaaaaaaaaa\
 aaaaaaaaaaaaaaa
 
