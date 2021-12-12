@@ -8,9 +8,9 @@ Di masa pandemi ini, diperlukan juga cara agar dapat meminimalisir kontak langsu
 Dari masalah ini, kami terinspirasi untuk membuat robot yang dapat mengantarkan barang secara otomatis. Robot kami merupakan sebuah AGV (Automated Guided Vehicle) pembawa barang yang paling cocok untuk implementasi skala kecil.
 
 # Konsep Desain Perangkat #
-Robot AGV pembawa barang kami memliki 4 bagian penting, yaitu drive system, UI & warning system, power & charging system, serta safety system. Berikut adalah uraian untuk masing-masing bagian.
+Robot AGV pembawa barang kami memliki 4 bagian penting, yaitu driving system, UI & warning system, power & charging system, serta safety system. Berikut adalah uraian untuk masing-masing bagian.
 
-## Drive System ##
+## Driving System ##
 Motor dan gearbox digunakan untuk menggerakan robot, serta beberapa photodiode dan sistem kendali PID dengan konsep line following untuk menjaga robot tetap pada jalurnya.
 
 ## UI & Warning System ##
@@ -198,4 +198,4 @@ Untuk sistem dan komponen selain yang disebutkan di atas, sudah bekerja dengan b
 - Subsistem Penggerak tidak bekerja secara maksimal dan terdapat perubahan dari design awal.
 - Subsistem Antarmuka dapat bekerja dengan baik sesuai design awal.
 - Subsistem Keamanan Barang dapat bekerja dengan baik, tapi berubah dari design yang awal.
-- Secara keseluruhan, robot Automated Carrier Vehicle (ACV) berhasil membawa barang dari satu tempat ke tempat yang lain berdasarkan input dari pengguna sesuai dengan map pada programa.
+- Secara keseluruhan, robot Automated Carrier Vehicle (ACV) berhasil membawa barang dari satu tempat ke tempat yang lain berdasarkan input dari pengguna sesuai dengan map pada program.
