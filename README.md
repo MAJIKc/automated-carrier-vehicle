@@ -1,8 +1,10 @@
 # automated-carrier-vehicle
 
 # Latar Belakang #
-Tuntutan pekerjaan modern yang semakin kompleks mengharuskan orang-orang untuk lebih bijak menggunakan waktu dan energi untuk mengerjakan hal-hal yang memaksimalkan kecerdasan otak manusia. Pekerjaan yang bersifat repetitif, monoton, dan tidak membutuhkan bantuan manusia dapat digantikan dengan sebuah robot.\ \ 
-Di masa pandemi ini, diperlukan juga cara agar dapat meminimalisir kontak langsung dengan orang lain. Salah satu saat di mana manusia paling sering berkontak langsung satu sama lain adalah ketika ingin memberikan sesuatu barang kepada yang lain.\ \
+Tuntutan pekerjaan modern yang semakin kompleks mengharuskan orang-orang untuk lebih bijak menggunakan waktu dan energi untuk mengerjakan hal-hal yang memaksimalkan kecerdasan otak manusia. Pekerjaan yang bersifat repetitif, monoton, dan tidak membutuhkan bantuan manusia dapat digantikan dengan sebuah robot.
+
+Di masa pandemi ini, diperlukan juga cara agar dapat meminimalisir kontak langsung dengan orang lain. Salah satu saat di mana manusia paling sering berkontak langsung satu sama lain adalah ketika ingin memberikan sesuatu barang kepada yang lain.
+
 Dari masalah ini, kami terinspirasi untuk membuat robot yang dapat mengantarkan barang secara otomatis. Robot kami merupakan sebuah AGV (Automated Guided Vehicle) pembawa barang yang paling cocok untuk implementasi skala kecil.
 
 
