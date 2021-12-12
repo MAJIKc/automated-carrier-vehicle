@@ -22,6 +22,27 @@ Robot menggunakan baterai yang dapat diisi ulang dengan charger smartphone.
 ## Safety System ##
 Robot dapat memelankan diri dan berhenti apabila sensor ultrasonik mendeteksi halangan di depan robot. Barang bawaan robot diamankan dengan sistem loker dan pengunci. Kombinasi load cell dan penguat sinyalnya untuk mengukur beban angkut robot dan memberi tahu pengguna apabila beban angkut robot sudah melebihi batas kemampuannya.
 
+# Komponen yang Dipakai #
+- Photodiode BPV10NF
+- Sensor Ultrasonik HC-SR04
+- Micro Servo SG90
+- IR LED (TSAL6100)
+- Active Buzzer
+- Arduino UNO
+- Motor Driver L298N
+- DC Gearbox Motor 3V-6V
+- Baterai Li-Ion CGR18650D
+- Modul Charge TP4056
+- DC-DC Step Down Module LM2596
+- LCD 1602
+- Load Cell TAL220
+- HX711 Module
+
+# Perancangan Sistem #
+## Desain Sistem Keseluruhan ##
+### Mock Up 3D Sistem ##
+![picture alt(https://cdn.discordapp.com/attachments/611548819322044437/919600240544346152/unknown.png)
+
 aaaaaaaaaaa\
 aaaaaaaaaaaaaaa
 
