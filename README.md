@@ -41,7 +41,7 @@ Robot dapat memelankan diri dan berhenti apabila sensor ultrasonik mendeteksi ha
 # Perancangan Sistem #
 ## Desain Sistem Keseluruhan ##
 ### Mock Up 3D Sistem ##
-![picture alt(https://cdn.discordapp.com/attachments/611548819322044437/919600240544346152/unknown.png)
+![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919600240544346152/unknown.png)
 
 aaaaaaaaaaa\
 aaaaaaaaaaaaaaa
