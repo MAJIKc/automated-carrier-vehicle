@@ -42,39 +42,49 @@ Robot dapat memelankan diri dan berhenti apabila sensor ultrasonik mendeteksi ha
 ## Desain Sistem Keseluruhan ##
 ### Mock Up 3D Sistem ##
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919600240544346152/unknown.png)
+
 Roda kanan dan kiri kami tempatkan di bagian tengah samping kanan dan kiri container supaya robot memiliki sistem differential drive. Pada sistem ini, membelokan robot dapat dengan mudah dilakukan dengan membedakan kecepatan antara kedua motor. Dua roda caster tambahan digunakan supaya robot lebih stabil. Kotak komponen di belakang container digunakan untuk melindungi Arduino Uno, LCD, step down module, baterai, charging module, dan konektor-konektor dari komponen di luar kotak komponen. Bagian dalam container berisikan load cell dengan di atasnya ada penampang PVC Sheet dengan ketebalan 2 mm. Lalu, menggunakan 2 servo motor untuk bagian penguncian loker.
 
 ### Diagram Blok Sistem Keseluruhan ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919600838161346611/unknown.png)
+
 Robot kami terbentuk dari 6 sistem utama, yaitu sistem line following, deteksi halangan, pengukuran berat, penggerak, antarmuka, dan keamanan barang. Penjelasan lebih lanjut mengenai masing-masing sistem terdapat pada bagian selanjutnya.
 
 ### Flowchart Sistem ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919600838371053598/unknown.png)
+
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919600838568198264/unknown.png)
+
 Secara Flowchart, ketika robot dinyalakan dengan switch power menuju mode ON, maka LCD akan menyala untuk menampilkan tujuan yang ada dan user tinggal memilih melalui button. Setelah itu, user meletakkan barang yang ingin diantarkan. Ketika barang bawaan melebihi 1 kg, pesan akan ditampilkan ke LCD dan menunggu sampai barang dikurangi beratnya. Jika kurang dari 1 kg, servo akan diaftifkan untuk mengunci loker dan robot akan berjalan. Selama perjalanan, robot akan mengikuti jalur yang sudah dibuat dan ketika robot bertemu halangan dengan jarak kurang dari 20 cm, buzzer akan diaktifkan selama 500 ms dan akan mengurangi kecepatan robot sebesar 20%. Ketika halangan sudah terdeteksi kurang dari 5 cm, robot akan membunyikan buzzer selama 10 s dan membuat robot berhenti total. Robot akan kembali berjalan sampai halangan yang ada sudah dihilangkan dari jalur robot. Jika selama perjalanan robot mendeteksi titik intersection, robot nantinya akan berbelok baik ke kiri atau kanan, ataupun lurus sesuai dengan mapping dari pilihan tujuan yang dipilih oleh user. Lalu, robot akan mengaktifkan servo untuk membuka kembali kunci loker ketika sudah sampai di titik tujuan dan akan menunggu konfirmasi pilihan tujuan dari user untuk kembali berjalan. Untuk mematikan robot, user cukup menekan kembali switch power menuju mode OFF.
 
 ### Desain Subsistem Line Following ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919601571908714496/unknown.png)
+
 Pada sistem ini, Arduino Uno membaca tangkapan intensitas cahaya inframerah oleh Photodiode yang akan berbeda ketika menghadap jalur atau ubin. Photodiode sendiri menangkap pantulan cahaya dari IR LED. Pembacaan ini kemudian diproses untuk digunakan oleh sistem penggerak.
 
 ### Desain Subsistem Deteksi Halangan ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919601572105838592/unknown.png)
+
 Pada sistem ini, sensor ultrasonik membaca jarak halangan di depan robot. Apabila jarak halangan sudah lebih kecil dari 20 cm, buzzer akan berbunyi selama 500 ms dan kecepatan robot akan dikurangi sebanyak 20%. Apabila jarak halangan sudah lebih kecil dari 5 cm, buzzer akan berbunyi selama 10 s dan robot diberhentikan.
 
 ### Desain Subsistem Pengukuran Berat ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919601572349112390/unknown.png)
+
 Pada sistem ini, load cell beserta ADC dan amplifier-nya akan mengukur beban barang bawaan robot. Apabila beban melebihi 1 kg, robot tidak diperbolehkan berjalan dan muncul peringatan pada sistem antarmuka. Apabila beban di bawah 1 kg, loker barang mengunci dan robot diperbolehkan untuk berjalan.
 
 ### Desain Subsistem Penggerak ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919601572579803196/unknown.png)
+
 Pada sistem ini, robot akan menerima perintah jalan dari sistem pengukuran berat, menerima informasi jalur dari sistem line following, dan menerima interupsi dari sistem deteksi halangan. Bacaan Photodiode dari sistem line following akan diproses oleh sistem kendali PID untuk mengendali kecepatan motor kanan dan kiri melalui motor driver agar robot tetap di tengah jalur. Fungsi Mapping digunakan untuk membelokan robot ke kiri atau ke kanan ketika berada di intersection tergantung pada lokasi awal dan tujuan robot.
 
 ### Desain Subsistem Antarmuka ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919601572856602674/unknown.png)
+
 Pada sistem ini, robot akan meminta pengguna untuk memilih lokasi awal dan tujuan. Pilihan lokasi dapat dilihat di LCD. Button kiri dan kanan digunakan untuk scrolling lokasi. Menekan kedua button akan mengkonfirmasi pilihan pengguna. Pilihan pengguna nantinya digunakan fungsi Mapping untuk menentukan arah robot setiap intersection.
 
 ### Desain Subsistem Keamanan Barang ###
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919601573062119424/unknown.png)
+
 Pada sistem ini, robot akan menunggu perintah untuk mengunci loker dari sistem pengukuran berat. Apabila terdapat perintah untuk mengunci loker, servo depan dan belakang akan menggerakan lengannya supaya terkait pada dudukan lengan sehingga mengunci loker.
 
 # Komponen Sistem #
@@ -148,18 +158,22 @@ Perubahan resistansi listrik yang disediakan oleh Load Cell perlu diperkuat sehi
 
 ## Penggantian Dua Servo menjadi Satu ##
 Dibandingkan dengan design awal yang berupa dua buah servo mengait ke kail pada tutup, design akhir yang dipilih adalah tangan servo dilekatkan pada pengunci yang sudah tersedia dari container. Jadi ketika servo bergerak, pengunci container yang sudah ada akan berotasi mengunci container robot. Selain itu, tidak digunakan juga dua buah servo tapi hanya satu untuk ke salah satu pengait container. Sisi tutup container yang satunya dilepas penguncinya dan dibuat menjadi engsel agar tutup container dapat bekerja sebagai tutup loker.
+
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919607490226827324/unknown.png)
 
 ## Malfungsi pada Load Cell ##
 Hasil penimbangan barang dan pencegahan overload pada robot tidak bekerja karena terdapat masalah pada HX711. Saat dilakukan debug, ditemukan bahwa load cell masih bekerja seperti seharusnya dan mengeluarkan voltage yang berubah sesuai berat yang diberikan. Masalah terdapat pada output dari  HX711 yang tidak terbaca oleh Arduino. Kemungkinan masalah ada pada rangkaian yang salah sehingga menyebabkan sistem load cell tidak bekerja atau HX711-nya sendiri yang malfungsi.
+
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919607490558181436/unknown.png)
 
 ## Kondisi PVC Sheet Penahan Beban ##
 Terdapat PVC Sheet yang terdapat di dalam container robot yang bekerja sebagai penghitung berat dan dasar dari loker yang menahan barang di atasnya. PVC sheet ini dipotong sendiri menggunakan tangan setelah melakukan pengukuran dinding dalam container. Namun karena dinding dalam container tidak tegak lurus, serta sulit untuk secara tepat menghitung keliling dinding dalam container, PVC yang dipotong akhirnya sedikit lebih kecil dan longgar. Terdapat sela kecil antara PVC dan dinding yang menyebabkan PVC Sheet sedikit goyang, namun karena lubang kecil barang yang berada dalam loker masih tidak akan jatuh.
+
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919607490851766363/unknown.png)
 
 ## Penyebab Caster Wheel Tidak Stabil ##
 Pemakaian dua Caster Wheel yang terpasang pada robot membuat pergerakan robot menjadi tidak stabil, dikarenakan pada saat robot ingin melakukan perjalanan maju, Caster Wheel yang merupakan roda tipe freewheel pada awalannya akan mengkondisikan posisinya untuk mengikuti kondisi pergerakan robot, hal tersebut yang akan membuat robot akan keluar dari jalur. Untuk itu, Caster Wheel diposisikan lurus dan direkatkan dengan lem tembak. Hal tersebut sudah membuat Caster Wheel tidak perlu memposisikan dirinya untuk menjadi lurus dan membuat robot berjalan lebih stabil.
+
 ![picture alt](https://cdn.discordapp.com/attachments/611548819322044437/919607491086655549/unknown.png)
 
 ## Motor Roda Kurang Kuat Menarik Benda di Atas 1 kg ##
