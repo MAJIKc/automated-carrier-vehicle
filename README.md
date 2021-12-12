@@ -198,4 +198,4 @@ Untuk sistem dan komponen selain yang disebutkan di atas, sudah bekerja dengan b
 - Subsistem Penggerak tidak bekerja secara maksimal dan terdapat perubahan dari design awal.
 - Subsistem Antarmuka dapat bekerja dengan baik sesuai design awal.
 - Subsistem Keamanan Barang dapat bekerja dengan baik, tapi berubah dari design yang awal.
-- Secara keseluruhan, robot Automated Carrier Vehicle (ACV) berhasil membawa barang dari satu tempat ke tempat yang lain berdasarkan input dari pengguna sesuai dengan map pada program.
+- Secara keseluruhan, robot Automated Carrier Vehicle (ACV) berhasil membawa barang dari satu tempat ke tempat yang lain berdasarkan input dari pengguna sesuai dengan map pada programa.
