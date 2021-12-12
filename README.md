@@ -37,6 +37,7 @@ Robot dapat memelankan diri dan berhenti apabila sensor ultrasonik mendeteksi ha
 - LCD 1602
 - Load Cell TAL220
 - HX711 Module
+- DPDT Switch
 
 # Perancangan Sistem #
 ## Desain Sistem Keseluruhan ##
